@@ -1,18 +1,35 @@
-:root {
+/* 1-INICIO 
+ASI DECLARAMOS VARIABLES, PUEDE SER PARA COLORES O PARA FONT-SIZE COMO QUERAMOS */
+:root {  
     --blanco: #ffffff;
     --primario: #FFC107;
-    --secundario: #0097A7;
+    --secundario: #5B2C6F ;
     --gris: #757575;
     --oscuro: #212121;
 }
+/*1-FIN*/
+
+
+
 html {
     box-sizing: border-box;
     min-height: 100%;
     scroll-snap-type: y mandatory;
 }
+
+/* 2-INICIO
+ESTO NOS PERMITE TRABAJAR CON EL ANCHO ESTABLECIDO 
+ES DECIR, SI PONEMOS 400px de with PERO TENEMOS 
+10px de padding SUMA AL FINAL: 420px de with 
+CON ESTAS DOS LINEAS DE CODIGO HACEMOS QUE LOS 400px
+ORIGINALES SE MANTENGAN AUQNUE TENGAMOS padding o margin :) */
 *, *:before, *:after {
     box-sizing: inherit;
 }
+/*2-FIN*/
+
+
+
 p {
     line-height: 2;
 }
@@ -26,7 +43,8 @@ h1 {
     font-size: 1.4rem;
 }
 h1 span {
-    font-size: 1.4rem;
+    font-size: 0.9rem;
+    color: var(--oscuro);
 }
 h1, h2, h3 {
     text-align: center;
@@ -54,13 +72,14 @@ h3 {
 }
 .nav-bg {
     background-color: var(--secundario);
+  
 }
 .navegacion {
     scroll-snap-align: center;
     scroll-snap-stop: always;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    
 }
 @media (min-width:768px) {
     .navegacion {
@@ -74,6 +93,9 @@ h3 {
     text-decoration: none;
     font-size: 1.4rem;
     font-weight: 700;
+    text-align: center;     /*Esta línea sirve para que el color amarillo
+                              del hoover seleccionem todo y no solo  la palabra*/
+    
 }
 .navegacion a:hover {
     background-color: var(--primario);
@@ -85,6 +107,7 @@ h3 {
 @media (min-width:768px) {
     .navegacion a{
         margin-bottom: 0;
+        
     }
 }
 .hero {
@@ -248,5 +271,13 @@ h3 {
 
 .footer {
     text-align: center;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+p span {
+    font-size: 0.7rem;
+    color: var(--oscuro);
+    font-weight: bold;
 }
 
